@@ -1,0 +1,187 @@
+* {
+  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  --background-color: #131216;
+  --logo-color: #f52228;
+  --links-color: #e4e4e1;
+  --background-icons: #201f23;
+  --color-icons: #a09da0;
+  --track-color: #080808;
+  --thumb-color: rgba(255, 255, 255, 0.2);
+  --thumb-hover-color: rgba(255, 255, 255, 0.4); /
+}
+
+body {
+  background-color: var(--background-color);
+  font-family: 'IBM Plex Sans Arabic', sans-serif !important;
+}
+html::-webkit-scrollbar {
+  width: 10px;
+}
+html::-webkit-scrollbar-track {
+  background-color: var(--track-color);
+}
+html::-webkit-scrollbar-thumb {
+  background-color: var(--thumb-color);
+  border-radius: 10px;
+  border: 2px solid var(--track-color);
+  background-clip: content-box;
+}
+html::-webkit-scrollbar-thumb:hover {
+  background-color: var(--thumb-hover-color);
+}
+ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+a {
+  text-decoration: none;
+}
+
+.my-header {
+  padding: 10px;
+}
+.my-header .container-fluid {
+  display: grid;
+  grid-template-columns: 2fr 5fr 5fr;
+  align-items: center;
+  position: relative;
+}
+@media (max-width: 991px) {
+  .my-header .container-fluid {
+    grid-template-columns: 2fr 8fr 2fr;
+  }
+}
+.my-header .container-fluid .logo {
+  cursor: pointer;
+  width: fit-content;
+}
+.my-header .container-fluid .logo h2 {
+  color: var(--logo-color);
+  font-size: 30px;
+  text-transform: uppercase;
+  font-weight: bold;
+  margin: 0;
+  letter-spacing: -1px;
+}
+.my-header .container-fluid .nav ul {
+  display: flex;
+  min-width: 380px;
+}
+.my-header .container-fluid .nav i {
+  display: none;
+  color: var(--color-icons);
+  margin-left: auto;
+  padding-right: 10px;
+  font-size: 22px;
+  cursor: pointer;
+}
+.my-header .container-fluid .nav ul li {
+  padding: 15px 20px;
+  position: relative;
+}
+.my-header .container-fluid .nav ul li a:before {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 0%;
+  height: 3px;
+  background-color: var(--logo-color);
+  transition: 0.4s;
+}
+.my-header .container-fluid .nav ul li a.router-link-active::before,
+.my-header .container-fluid .nav ul li a:hover:before {
+  width: 60%;
+}
+@media (max-width: 768px) {
+  .my-header .container-fluid .nav i {
+    display: block;
+  }
+  .my-header .container-fluid .nav ul {
+    display: none;
+    position: absolute;
+    left: 0;
+    top: 60px;
+    background-color: var(--background-icons);
+    width: 100%;
+    border-radius: 6px;
+  }
+  .my-header .container-fluid .nav ul.show {
+    display: block;
+    z-index: 1000;
+  }
+  .my-header .container-fluid .nav ul li {
+    padding: 0;
+  }
+  .my-header .container-fluid .nav ul li a {
+    padding: 10px;
+    width: 100%;
+    display: block;
+  }
+  .my-header .container-fluid .nav ul li a.router-link-active::before,
+  .my-header .container-fluid .nav ul li a:hover:before {
+    display: none;
+  }
+}
+.my-header .container-fluid .nav ul li a {
+  color: var(--links-color);
+}
+.my-header .container-fluid .search-profile {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-left: auto;
+  color: var(--links-color);
+}
+.my-header .container-fluid .search-profile .search {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.my-header .container-fluid .search-profile .search i,
+.my-header .container-fluid .notifiaction i {
+  width: 30px;
+  height: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 8px;
+  background-color: var(--background-icons);
+  color: var(--color-icons);
+  cursor: pointer;
+}
+.my-header .container-fluid .search-profile .search input {
+  /* display: none; */
+  border: none;
+  outline: none;
+  border-radius: 4px;
+  padding: 5px;
+  background-color: #a09da082;
+  color: var(--links-color);
+}
+@media (max-width: 991px) {
+  .my-header .container-fluid .search-profile .search input {
+    width: 140px;
+  }
+}
+@media (max-width: 767px) {
+  .my-header .container-fluid .search-profile .search input {
+    width: 100px;
+  }
+}
+.my-header .container-fluid .search-profile .search input::placeholder {
+  color: white;
+}
+
+.my-header .container-fluid .search-profile img {
+  width: 30px;
+  border-radius: 10px;
+  cursor: pointer;
+}
