@@ -1,6 +1,6 @@
-# 🎬 Movie Streaming App (Vue.js)
+# 🎬 Entertainment Web App (Vue.js)
 
-A modern and responsive **movie streaming interface** built with **Vue.js**, inspired by popular platforms like Netflix. This project focuses on delivering a clean UI and smooth user experience for browsing movie content.
+A modern and responsive **entertainment web application** built with **Vue.js**, allowing users to explore movies and TV series, search content, and manage bookmarked items with a clean and interactive UI.
 
 ---
 
@@ -12,11 +12,13 @@ A modern and responsive **movie streaming interface** built with **Vue.js**, ins
 
 ## 📌 Features
 
-* 🎥 Browse movies and trending content
-* 📂 Organized categories/sections
-* 🎨 Clean and modern UI design
-* 📱 Fully responsive layout
-* ⚡ Smooth navigation and interactions
+* 🔍 Real-time search for movies and TV series
+* 🎬 Browse trending and recommended content
+* 📺 Separate sections for Movies and TV Series
+* 🔖 Bookmark / unbookmark functionality
+* 📂 Dedicated bookmarks page
+* 🧭 Sidebar navigation between sections
+* 📱 Fully responsive design
 
 ---
 
@@ -29,34 +31,30 @@ A modern and responsive **movie streaming interface** built with **Vue.js**, ins
 
 ---
 
-## 🎯 Project Purpose
+## 🎯 The Challenge
 
-This project was built as a **frontend practice** to simulate a real-world streaming platform UI and improve skills in:
-
-* Component-based architecture
-* UI/UX design implementation
-* Responsive design techniques
-* Structuring scalable front-end projects
+This project is based on a **Frontend Mentor challenge**, focused on building a realistic entertainment platform UI with interactive features and state management.
 
 ---
 
 ## 📚 What I Learned
 
-* Building reusable Vue components
-* Structuring a UI مشابه لتطبيقات حقيقية
-* تحسين تجربة المستخدم (UX)
-* التعامل مع layout معقد نسبيًا
+* Managing application state (bookmarks, filtering)
+* Implementing real-time search functionality
+* Structuring multi-page UI with Vue
+* Building reusable components
+* Creating responsive and scalable layouts
 
 ---
 
 ## 🔧 Setup & Installation
 
-```bash id="u9a2kp"
+```bash id="zq7wpl"
 # Clone the repository
-git clone https://github.com/MustafaKullab/movie-streaming-app.git
+git clone https://github.com/MustafaKullab/entertainment-web-app.git
 
 # Navigate into the project folder
-cd movie-streaming-app
+cd entertainment-web-app
 
 # Install dependencies
 npm install
@@ -69,11 +67,11 @@ npm run dev
 
 ## 📈 Future Improvements
 
-* 🔍 Add search functionality
-* ❤️ Add favorites/watchlist
-* 🌙 Dark mode support
-* 🔗 Integrate real movie API (TMDB)
-* ▶️ Add video player functionality
+* 🔗 Integrate real API (e.g., TMDB)
+* 🔐 Add authentication (login system)
+* 🎥 Add video player functionality
+* ⭐ Rating system
+* 🌙 Dark/light mode toggle
 
 ---
 
@@ -85,4 +83,5 @@ npm run dev
 
 ## 🙌 Acknowledgments
 
-Inspired by modern streaming platforms like Netflix and similar UI design patterns.
+* Frontend Mentor for the challenge
+* Inspired by modern streaming platforms UI patterns
